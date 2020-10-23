@@ -1,6 +1,6 @@
-package com.vytrack.pages;
+package com.NextBaseCRM.pages;
 
-import com.vytrack.utilities.Driver;
+import com.NextBaseCRM.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

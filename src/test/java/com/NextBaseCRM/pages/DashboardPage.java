@@ -1,4 +1,4 @@
-package com.vytrack.pages;
+package com.NextBaseCRM.pages;
 
 public class DashboardPage extends BasePage {
 }

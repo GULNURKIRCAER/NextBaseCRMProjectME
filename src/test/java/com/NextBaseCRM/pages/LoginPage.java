@@ -1,6 +1,6 @@
-package com.vytrack.pages;
+package com.NextBaseCRM.pages;
 
-import com.vytrack.utilities.Driver;
+import com.NextBaseCRM.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,16 +11,23 @@ public class LoginPage {
         PageFactory.initElements(Driver.get(), this);
     }
 
-    @FindBy(id="prependedInput")
+    @FindBy(name = "USER_LOGIN")
     public WebElement userName;
 
+    @FindBy(id = "log_entry_favorites_4522")
+    public WebElement starIcon;
 
-
-    @FindBy(id="prependedInput2")
+    @FindBy(name="USER_PASSWORD")
     public WebElement password;
 
-    @FindBy(name = "_submit")
+    @FindBy(className = "login-btn")
     public WebElement submit;
+
+    @FindBy(xpath = "//input[@placeholder='Filter and search']")
+    public WebElement FilSearch;
+
+    @FindBy(xpath = "//span[text()='Favorites']")
+    public WebElement favoriteBtn;
 
 
     public void login(String userNameStr, String passwordStr) {
@@ -29,6 +36,6 @@ public class LoginPage {
         submit.click();
         // verification that we logged
     }
-    //BREAK UNTIL 12:10
+
 
 }

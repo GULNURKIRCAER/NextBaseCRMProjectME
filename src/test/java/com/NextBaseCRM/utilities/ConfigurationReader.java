@@ -1,4 +1,4 @@
-package com.vytrack.utilities;
+package com.NextBaseCRM.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;

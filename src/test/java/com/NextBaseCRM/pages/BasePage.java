@@ -1,7 +1,7 @@
-package com.vytrack.pages;
+package com.NextBaseCRM.pages;
 
-import com.vytrack.utilities.BrowserUtils;
-import com.vytrack.utilities.Driver;
+import com.NextBaseCRM.utilities.BrowserUtils;
+import com.NextBaseCRM.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -94,8 +94,8 @@ public abstract class  BasePage {
      * @param module
      */
     public void navigateToModule(String tab, String module) {
-        String tabLocator = "//span[normalize-space()='" + tab + "' and contains(@class, 'title title-level-1')]";
-        String moduleLocator = "//span[normalize-space()='" + module + "' and contains(@class, 'title title-level-2')]";
+        String tabLocator = "//input[@placeholder='Filter and search']";
+        String moduleLocator = "//span[text()='Favorites']";
         try {
             BrowserUtils.waitForClickablility(By.xpath(tabLocator), 5);
             WebElement tabElement = Driver.get().findElement(By.xpath(tabLocator));

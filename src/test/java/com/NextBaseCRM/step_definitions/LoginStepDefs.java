@@ -18,7 +18,7 @@ public class LoginStepDefs {
 
     }
     @When("the user enters the helpdesk information")
-    public void the_user_enters_the_helpdesk_information() throws InterruptedException {
+    public void the_user_enters_the_helpdesk_information() {
 
         BrowserUtils.waitFor(2);
         String username = ConfigurationReader.get("helpdesk_username");
@@ -86,4 +86,26 @@ public class LoginStepDefs {
 
         Assert.assertTrue(loginPage.starIcon.isEnabled());
     }
+
+    @When("the user enters the {string} information")
+    public void the_user_enters_the_information(String userType) {
+
+        switch (userType.toLowerCase()){
+            case "helpdesk":
+                the_user_enters_the_helpdesk_information();
+                break;
+            case "marketing":
+                the_user_enters_the_marketing_manager_information();
+                break;
+            case "hr":
+                the_user_enters_the_hr_manager_information();
+                break;
+            default:
+                System.out.println("There is not any user in system such as "+userType);
+
+        }
+
+
+    }
+
 }

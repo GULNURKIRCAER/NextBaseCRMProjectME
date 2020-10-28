@@ -90,7 +90,7 @@ public class LoginStepDefs {
     @When("the user enters the {string} information")
     public void the_user_enters_the_information(String userType) {
 
-        switch (userType.toLowerCase()){
+        switch (userType){
             case "helpdesk":
                 the_user_enters_the_helpdesk_information();
                 break;
@@ -104,6 +104,7 @@ public class LoginStepDefs {
                 System.out.println("There is not any user in system such as "+userType);
 
         }
+        //njknmj
 
 
     }

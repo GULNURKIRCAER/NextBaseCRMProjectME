@@ -104,7 +104,7 @@ public class LoginStepDefs {
                 System.out.println("There is not any user in system such as "+userType);
 
         }
-        //njknmj
+
 
 
     }
